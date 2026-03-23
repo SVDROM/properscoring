@@ -7,7 +7,7 @@ def brier_score(observations, forecasts):
     """
     Calculate the Brier score (BS)
 
-    The Brier score (BS) scores binary forecasts $k \in \{0, 1\}$,
+    The Brier score (BS) scores binary forecasts $k \\in \\{0, 1\\}$,
 
     ..math:
         BS(p, k) = (p_1 - k)^2,
@@ -99,9 +99,9 @@ def threshold_brier_score(observations, forecasts, threshold, issorted=False,
     scores can thus be summed along the last axis to calculate CRPS, as
 
     .. math::
-        CRPS(F, x) = \int_z BS(F(z), H(z - x)) dz
+        CRPS(F, x) = \\int_z BS(F(z), H(z - x)) dz
 
-    where $F(x) = \int_{z \leq x} p(z) dz$ is the cumulative distribution
+    where $F(x) = \\int_{z \\leq x} p(z) dz$ is the cumulative distribution
     function (CDF) of the forecast distribution $F$, $x$ is a point estimate of
     the true observation (observational error is neglected), $BS$ denotes the
     Brier score and $H(x)$ denotes the Heaviside step function, which we define
