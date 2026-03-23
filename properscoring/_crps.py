@@ -254,9 +254,9 @@ def crps_ensemble(observations, forecasts, weights=None, issorted=False,
     density $p(x)$,
 
     .. math::
-        CRPS(F, x) = \int_z (F(z) - H(z - x))^2 dz
+        CRPS(F, x) = \\int_z (F(z) - H(z - x))^2 dz
 
-    where $F(x) = \int_{z \leq x} p(z) dz$ is the cumulative distribution
+    where $F(x) = \\int_{z \\leq x} p(z) dz$ is the cumulative distribution
     function (CDF) of the forecast distribution $F$ and $H(x)$ denotes the
     Heaviside step function, where $x$ is a point estimate of the true
     observation (observational error is neglected).
